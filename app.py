@@ -1,5 +1,4 @@
-from flask_mail import Mail, Message
-from twilio.rest import Client
+
 import os
 import json
 from flask import Flask, render_template, request, redirect, url_for, flash, session
@@ -7,15 +6,7 @@ from werkzeug.utils import secure_filename
 print("Starting the flask app..")
 app = Flask(__name__)
 
-app.secret_key = 'Train_insane_or_remain_the_same'
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USERNAME'] = 'abdulaijalloh@975gmail.com'
-app.config['MAIL_PASSWORD'] = 'your_app_password'
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USE_SSL'] = False
 
-mail = Mail(app)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
