@@ -5,8 +5,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash, ses
 from werkzeug.utils import secure_filename
 print("Starting the flask app..")
 app = Flask(__name__)
-
-
+app.secret_key = 'only those who strong can sovive'
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
